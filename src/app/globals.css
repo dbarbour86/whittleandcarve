@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #fbf9f5;
+    --foreground: #22201d;
+    --muted: #4a453e;
+    --subtle: #736c63;
+    --card: #ffffff;
+    --card-border: #e7e1d6;
+    --card-warm: #f5f1ea;
+    --accent-wood: #a05a2c;
+    --accent-wood-hover: #86471e;
+    --accent-forest: #2a4436;
+    --accent-paper: #ede7dc;
+    --border-light: #ece6dc;
+    --border-strong: #d5cbbe;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+}
+
+/* Custom craftsmanship touches */
+.paper-texture-subtle {
+  background-image: radial-gradient(rgba(34, 32, 29, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.notebook-border {
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 1px 3px rgba(34, 32, 29, 0.04), 0 1px 2px rgba(34, 32, 29, 0.02);
+}
+
+.prose-whittle {
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose-whittle p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-whittle strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.prose-whittle h2 {
+  color: var(--foreground);
+  font-size: 1.875rem;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.prose-whittle h3 {
+  color: var(--foreground);
+  font-size: 1.375rem;
+  line-height: 1.35;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.prose-whittle ul, .prose-whittle ol {
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose-whittle li {
+  margin-bottom: 0.5rem;
+}
+
+/* Accessible focus styling */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent-wood);
+  outline-offset: 2px;
+}
