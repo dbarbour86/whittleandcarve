@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface InstructionalPlaceholderProps {
   stepNumber?: number;
@@ -6,6 +7,8 @@ interface InstructionalPlaceholderProps {
   description: string;
   aspectRatio?: "16/9" | "4/3" | "3/2";
   caption?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 export function InstructionalPlaceholder({
@@ -14,7 +17,35 @@ export function InstructionalPlaceholder({
   description,
   aspectRatio = "16/9",
   caption,
+  imageSrc,
+  imageAlt,
 }: InstructionalPlaceholderProps) {
+  if (imageSrc) {
+    return (
+      <figure className="my-8">
+        <div className="rounded-xl overflow-hidden notebook-border bg-[#efe8dc] border border-[#d5cbbe] shadow-xs">
+          <Image
+            src={imageSrc}
+            alt={imageAlt || description}
+            width={1536}
+            height={1024}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 800px"
+          />
+          <figcaption className="p-3.5 sm:p-4 bg-[#fdfcf9] border-t border-[#e2d8ca] text-xs sm:text-sm text-[#5e584f] leading-relaxed">
+            {stepNumber && (
+              <span className="inline-flex items-center px-2 py-0.5 rounded bg-[#f0eae0] text-[#736c63] text-xs font-semibold uppercase tracking-wider mr-2 align-middle">
+                Step {stepNumber}
+              </span>
+            )}
+            <strong className="text-[#22201d] font-semibold mr-1.5">{title}:</strong>
+            <span>{caption || description}</span>
+          </figcaption>
+        </div>
+      </figure>
+    );
+  }
+
   const aspectClass =
     aspectRatio === "16/9"
       ? "aspect-video"

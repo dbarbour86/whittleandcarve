@@ -27,6 +27,7 @@ export default function WhittleMushroomPage() {
     name: "How to Whittle a Simple Wooden Mushroom",
     description:
       "A step-by-step beginner wood carving tutorial to whittle a classic wooden mushroom from a small block of basswood.",
+    image: "https://whittleandcarve.com/images/mushroom_6.png",
     totalTime: "PT50M",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -63,36 +64,42 @@ export default function WhittleMushroomPage() {
         position: 1,
         name: "Mark the Cap Perimeter",
         text: "Draw a pencil reference line completely around the block, roughly 1 inch down from the top edge.",
+        image: "https://whittleandcarve.com/images/mushroom_1.png",
       },
       {
         "@type": "HowToStep",
         position: 2,
         name: "Establish the Cap Stop Cut",
         text: "Make a shallow, controlled incision into the wood along the pencil line to establish a distinct stop boundary.",
+        image: "https://whittleandcarve.com/images/mushroom_2.png",
       },
       {
         "@type": "HowToStep",
         position: 3,
         name: "Relieve Wood to Form the Stem",
         text: "Make light, controlled slicing cuts angled toward your stop cut to remove waste wood and create a shoulder beneath the cap.",
+        image: "https://whittleandcarve.com/images/mushroom_3.png",
       },
       {
         "@type": "HowToStep",
         position: 4,
         name: "Round the Mushroom Cap",
         text: "Chamfer the sharp corners and take light shaving cuts to shape a smooth, rounded cap.",
+        image: "https://whittleandcarve.com/images/mushroom_4.png",
       },
       {
         "@type": "HowToStep",
         position: 5,
         name: "Taper the Stem",
         text: "Take light passes down the stem to round its corners and gently narrow it toward the cap shoulder.",
+        image: "https://whittleandcarve.com/images/mushroom_5.png",
       },
       {
         "@type": "HowToStep",
         position: 6,
         name: "Clean Facets and Optional Finish",
         text: "Take light finishing passes across the wood, strop your knife edge, and optionally apply a natural wax or oil finish.",
+        image: "https://whittleandcarve.com/images/mushroom_6.png",
       },
     ],
   };
@@ -108,7 +115,7 @@ export default function WhittleMushroomPage() {
         <Breadcrumbs
           items={[
             { label: "Projects", href: "/#projects" },
-            { label: "Whittle a Wooden Mushroom" },
+            { label: "Whittle a Mushroom" },
           ]}
         />
 
@@ -120,7 +127,7 @@ export default function WhittleMushroomPage() {
             How to Whittle a Simple Wooden Mushroom
           </h1>
           <p className="text-lg sm:text-xl text-[#4a453e] leading-relaxed max-w-2xl font-editorial italic">
-            The classic first woodcarving project. It teaches stop cuts, waste relief, and simple dome shaping without complicated carving geometry.
+            The ideal first carving project. Learn foundational stop cuts, shape natural organic contours, and finish a charming wooden keepsake with minimal equipment.
           </p>
 
           {/* Project Quick Specs Box */}
@@ -239,7 +246,9 @@ export default function WhittleMushroomPage() {
             stepNumber={1}
             title="Marking the Cap Perimeter"
             description="Layout view showing a basswood block with a reference line marked around all four faces roughly one inch from the top."
-            aspectRatio="16/9"
+            imageSrc="/images/mushroom_1.png"
+            imageAlt="Basswood blank marked with pencil guide lines for the mushroom cap and stem on a workbench with carving knife and cut-resistant glove"
+            caption="Basswood block marked with reference lines for the cap and stem on the workshop bench."
           />
 
           {/* STEP 2 */}
@@ -255,7 +264,9 @@ export default function WhittleMushroomPage() {
             stepNumber={2}
             title="Establishing the Cap Stop Cut"
             description="Shows a shallow, controlled stop cut placed along the marked line with the holding hand positioned safely behind the blade."
-            aspectRatio="16/9"
+            imageSrc="/images/mushroom_2.png"
+            imageAlt="Gloved holding hand securing the wood block as the knife makes a controlled stop cut along the pencil guide line"
+            caption="Carving the shallow stop cut along the marked line with the holding hand protected in a glove."
           />
 
           {/* STEP 3 */}
@@ -274,7 +285,9 @@ export default function WhittleMushroomPage() {
             stepNumber={3}
             title="Relieving Wood to Form the Stem"
             description="Shows a controlled slicing cut angled toward the stop cut, releasing small wood shavings beneath the cap shoulder."
-            aspectRatio="16/9"
+            imageSrc="/images/mushroom_3.png"
+            imageAlt="Knife slicing a relief cut into the stop cut to release wood shavings and define the mushroom cap shoulder"
+            caption="Slicing light relief cuts into the stop cut to create the cap shoulder and release clean wood shavings."
           />
 
           {/* STEP 4 */}
@@ -293,7 +306,9 @@ export default function WhittleMushroomPage() {
             stepNumber={4}
             title="Rounding the Mushroom Cap"
             description="Shows light, controlled cuts gently softening the sharp corners into a balanced, rounded mushroom cap."
-            aspectRatio="16/9"
+            imageSrc="/images/mushroom_4.png"
+            imageAlt="Holding hand in cut-resistant glove while knife shaves corner facets into a rounded mushroom cap dome"
+            caption="Chamfering and shaving the square corners into a gentle, rounded mushroom cap dome."
           />
 
           {/* STEP 5 */}
@@ -312,7 +327,9 @@ export default function WhittleMushroomPage() {
             stepNumber={5}
             title="Tapering and Shaping the Stem"
             description="Illustrates controlled shaving cuts down the length of the stem, gently narrowing it toward the cap shoulder."
-            aspectRatio="16/9"
+            imageSrc="/images/mushroom_5.png"
+            imageAlt="Knife making light peeling cuts down the stem of the wooden mushroom to taper and round its form"
+            caption="Taking light shaving passes down the stem to narrow it toward the cap shoulder."
           />
 
           {/* STEP 6 */}
@@ -342,7 +359,9 @@ export default function WhittleMushroomPage() {
             stepNumber={6}
             title="Finished Hand-Carved Mushroom"
             description="Display of completed wooden mushroom with clean hand-carved facets and optional natural finish."
-            aspectRatio="16/9"
+            imageSrc="/images/mushroom_6.png"
+            imageAlt="Completed hand-whittled basswood mushroom standing on the workbench surrounded by wood shavings"
+            caption="The completed hand-carved wooden mushroom showing crisp hand-carved facets."
           />
 
           <h2>Troubleshooting Common Beginner Difficulties</h2>
